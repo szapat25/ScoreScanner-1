@@ -5,3 +5,6 @@ Este es el repositorio para ScoreScanner, una aplicación híbrida que reconoce 
 * Angela María Ochoa Botero
 * Maria Camila Morales Rios
 * Stefania Zapata Osorio 
+## Creado con
+* Python 3.6
+* Tensorflow
