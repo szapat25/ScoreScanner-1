@@ -6,6 +6,6 @@ Este es el repositorio para ScoreScanner, una aplicación híbrida que reconoce 
 * Maria Camila Morales Rios
 * Stefania Zapata Osorio 
 
-**Creado con**
+##### Creado con
 * Python 3.6
 * Tensorflow
