@@ -1,0 +1,8 @@
+{
+  "name": "ScoreScanner",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "0ebb90a5"
+}
