@@ -292,6 +292,143 @@ selection-color: rgb(0, 0, 0);</string>
      </item>
     </layout>
    </widget>
+   <widget class="QFrame" name="frame_Adjuntar">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>90</y>
+      <width>501</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>27</x>
+       <y>40</y>
+       <width>451</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>10</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Registro de Partituras&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>350</y>
+       <width>176</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="boton_Adjuntar">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>100</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(179, 179, 179);</string>
+     </property>
+     <property name="text">
+      <string>Adjuntar</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="boton_Procesar">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>170</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(179, 179, 179);</string>
+     </property>
+     <property name="text">
+      <string>Procesar</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="boton_Descargar">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>240</y>
+       <width>85</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(179, 179, 179);</string>
+     </property>
+     <property name="text">
+      <string>Descargar</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>100</y>
+       <width>251</width>
+       <height>181</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
    <zorder>listView</zorder>
    <zorder>label_SSL</zorder>
    <zorder>label_logo</zorder>
@@ -304,6 +441,7 @@ selection-color: rgb(0, 0, 0);</string>
    <zorder>label_Extras</zorder>
    <zorder>boton_AboutUs</zorder>
    <zorder>horizontalLayoutWidget</zorder>
+   <zorder>frame_Adjuntar</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -318,7 +456,7 @@ selection-color: rgb(0, 0, 0);</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../../logo.qrc"/>
+  <include location="../icons/logo.qrc"/>
  </resources>
  <connections/>
 </ui>
