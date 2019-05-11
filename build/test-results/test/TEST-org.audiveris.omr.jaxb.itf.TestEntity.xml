@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.audiveris.omr.jaxb.itf.TestEntity" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-04-22T15:57:20" hostname="MacBook-Air-de-Maria.local" time="0.161">
+  <properties/>
+  <testcase name="testInSequence" classname="org.audiveris.omr.jaxb.itf.TestEntity" time="0.157"/>
+  <testcase name="testDummy" classname="org.audiveris.omr.jaxb.itf.TestEntity" time="0.004"/>
+  <system-out><![CDATA[
+---
+testInSequence:
+index: MyBasicIndex{my-index-name MyGlyph{First id:1} MySymbol{w:100 id:2} MyGlyph{Second id:3} MyGlyph{Third id:4} MySymbol{w:200 id:5}}
+Marshalling ...
+Marshalled   to   data/temp/test-itf/itf-index.xml
+=========================================================
+<?xml version="1.0" ?>
+<myBasicIndex name="my-index-name" last-id="5">
+  <entities>
+    <glyph name="First" id="1"></glyph>
+    <symbol weight="100" id="2"></symbol>
+    <glyph name="Second" id="3"></glyph>
+    <glyph name="Third" id="4"></glyph>
+    <symbol weight="200" id="5"></symbol>
+  </entities>
+</myBasicIndex>=========================================================
+Unmarshalling ...
+Unmarshalled from data/temp/test-itf/itf-index.xml
+index: MyBasicIndex{my-index-name MyGlyph{First id:1} MySymbol{w:100 id:2} MyGlyph{Second id:3} MyGlyph{Third id:4} MySymbol{w:200 id:5}}
++++ End testInSequence(org.audiveris.omr.jaxb.itf.TestEntity)
+
+---
+testDummy:
++++ End testDummy(org.audiveris.omr.jaxb.itf.TestEntity)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

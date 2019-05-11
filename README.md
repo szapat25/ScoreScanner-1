@@ -1,15 +1,52 @@
-# ScoreScanner
-Este es el repositorio para ScoreScanner, una aplicación de escritorio que reconoce partituras manuscritas y las convierte a un formato MusicXML para su posterior edición en programas editores de partituras.
+# audiveris
 
-## Getting Started
-### Creado con
-* Python 3.6
-* Audiveris
-* Tesseract OCR
+This repository contains source code for the latest generation of Audiveris Optical
+Music Recognition (OMR) application.
 
-## Autores
-* Alejandra Cárdenas Montoya 
-* Angela María Ochoa Botero
-* Maria Camila Morales Rios
-* Stefania Zapata Osorio 
+## Releases
 
+All releases are available on [Audiveris Releases][releases] page.
+
+The most recent stable version is release 5.1, published on December 13, 2018.
+
+## Main features
+
+Derived from Audiveris [earlier generation][audiveris-eg] (4.x versions),
+which was limited to fast processing
+of small high-quality scores in memory, this repository (starting with Audiveris 5.x versions) is
+significantly more ambitious:
+
+* Good recognition efficiency on real-world quality scores (as seen on [IMSLP][imslp] site)
+* Effective support for large scores (with up to hundreds of pages)
+* Convenient user-oriented interface to detect and correct most OMR errors
+* Openness to external access
+* Available on Windows, Linux and MacOS
+
+The core of engine music information (OMR data) is fully documented and made publicly available,
+either directly via XML-based `.omr` project files or via the Java API of this software:
+
+* Audiveris includes an integrated exporter, which can write a subset of OMR data into
+[MusicXML][musicxml] 3.0 format.
+* Other exporters are expected to build upon this OMR data to support other target formats.
+
+## Installing and running, for Windows only
+
+Refer to HandBook [Binaries][binaries] section.
+
+## Building and running, for Windows, MacOS, Linux and ArchLinux
+
+Refer to HandBook [Sources][sources] section.
+
+## Further Information
+
+Users and Developers are advised to read the specific [User Handbook for 5.1 release][handbook],
+and the more general [Wiki][audiveris-wiki] set of articles.
+
+[audiveris-wiki]: https://github.com/Audiveris/audiveris/wiki
+[audiveris-eg]:   htps://github.com/Audiveris/audiveris-eg
+[musicxml]:       http://www.musicxml.com/
+[imslp]:          https://imslp.org/
+[handbook]:       https://bacchushlg.gitbooks.io/audiveris-5-1/content/
+[binaries]:       https://bacchushlg.gitbooks.io/audiveris-5-1/content/install/binaries.html
+[sources]:        https://bacchushlg.gitbooks.io/audiveris-5-1/content/install/sources.html
+[releases]:       https://github.com/Audiveris/audiveris/releases

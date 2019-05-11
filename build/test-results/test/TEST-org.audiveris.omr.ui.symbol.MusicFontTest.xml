@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.audiveris.omr.ui.symbol.MusicFontTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-22T15:57:13" hostname="MacBook-Air-de-Maria.local" time="3.496">
+  <properties/>
+  <testcase name="textPrintout" classname="org.audiveris.omr.ui.symbol.MusicFontTest" time="3.496"/>
+  <system-out><![CDATA[10:57:16.223 [Test worker] DEBUG org.audiveris.omr.constant.ConstantManager - [org.audiveris.omr.constant.ConstantManager] No property file /Users/mariacamilamoralesrios/Library/Application Support/AudiverisLtd/audiveris/run.properties
+10:57:16.334 [Test worker] DEBUG org.audiveris.omr.ui.symbol.OmrFont - Font url=file:/Users/mariacamilamoralesrios/audiveris/res/MusicalSymbols.ttf
+10:57:16.351 [Test worker] DEBUG org.audiveris.omr.ui.symbol.OmrFont - Created custom font MusicalSymbols
+10:57:16.351 [Test worker] DEBUG org.audiveris.omr.ui.symbol.OmrFont - Using cached font MusicalSymbols
+10:57:16.352 [Test worker] DEBUG org.audiveris.omr.ui.symbol.OmrFont - Using cached font MusicalSymbols
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

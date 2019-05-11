@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Version: 5.1.0
+Built-By: Audiveris Ltd.
+Specification-Vendor: Audiveris Ltd.
+Specification-Title: Audiveris
+Specification-Version: 5.1.0
+

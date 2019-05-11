@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.audiveris.omr.math.RationalTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2019-04-22T15:57:19" hostname="MacBook-Air-de-Maria.local" time="0.013">
+  <properties/>
+  <testcase name="testAbs" classname="org.audiveris.omr.math.RationalTest" time="0.003"/>
+  <testcase name="testCompareTo" classname="org.audiveris.omr.math.RationalTest" time="0.002"/>
+  <testcase name="testDivides_Rational" classname="org.audiveris.omr.math.RationalTest" time="0.001"/>
+  <testcase name="testDivides_int" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testEquals" classname="org.audiveris.omr.math.RationalTest" time="0.001"/>
+  <testcase name="testGcd_RationalArr" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testGcd_Rational_Rational" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testHashCode" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testMinus_Rational" classname="org.audiveris.omr.math.RationalTest" time="0.001"/>
+  <testcase name="testMinus_int" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testNegate" classname="org.audiveris.omr.math.RationalTest" time="0.001"/>
+  <testcase name="testPlus_Rational" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testPlus_int" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testReciprocal" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testTimes_Rational" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testTimes_int" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testToDouble" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <testcase name="testToString" classname="org.audiveris.omr.math.RationalTest" time="0.0"/>
+  <system-out><![CDATA[abs
+compareTo
+divides
+divides
+equals
+gcd
+gcd
+hashCode
+minus
+minus
+opposite
+plus
+plus
+inverse
+times
+times
+toDouble
+toString
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
