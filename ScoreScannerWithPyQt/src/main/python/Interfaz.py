@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ScoreScanner/ScoreScannerWithPyQt/src/Interfaz.ui'
+# Form implementation generated from reading ui file '/home/alejandra/Entornos/ProyectoP1/ScoreScanner/ScoreScannerWithPyQt/src/main/python/Interfaz.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -121,6 +122,7 @@ class Ui_MainWindow(object):
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(210, 0, 531, 71))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label = QtWidgets.QLabel(self.horizontalLayoutWidget)
         font = QtGui.QFont()
@@ -131,26 +133,26 @@ class Ui_MainWindow(object):
 "selection-color: rgb(0, 0, 0);")
         self.label.setObjectName("label")
         self.horizontalLayout_2.addWidget(self.label)
-        self.frame_Adjuntar = QtWidgets.QFrame(self.centralwidget)
-        self.frame_Adjuntar.setGeometry(QtCore.QRect(230, 90, 501, 391))
-        self.frame_Adjuntar.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.frame_Adjuntar.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_Adjuntar.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_Adjuntar.setObjectName("frame_Adjuntar")
-        self.line = QtWidgets.QFrame(self.frame_Adjuntar)
+        self.frame_RegistroP = QtWidgets.QFrame(self.centralwidget)
+        self.frame_RegistroP.setGeometry(QtCore.QRect(230, 90, 501, 391))
+        self.frame_RegistroP.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.frame_RegistroP.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_RegistroP.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_RegistroP.setObjectName("frame_RegistroP")
+        self.line = QtWidgets.QFrame(self.frame_RegistroP)
         self.line.setGeometry(QtCore.QRect(27, 40, 451, 20))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
-        self.label_2 = QtWidgets.QLabel(self.frame_Adjuntar)
+        self.label_2 = QtWidgets.QLabel(self.frame_RegistroP)
         self.label_2.setGeometry(QtCore.QRect(40, 10, 241, 31))
         self.label_2.setObjectName("label_2")
-        self.buttonBox = QtWidgets.QDialogButtonBox(self.frame_Adjuntar)
+        self.buttonBox = QtWidgets.QDialogButtonBox(self.frame_RegistroP)
         self.buttonBox.setGeometry(QtCore.QRect(180, 350, 176, 27))
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setCenterButtons(True)
         self.buttonBox.setObjectName("buttonBox")
-        self.boton_Adjuntar = QtWidgets.QPushButton(self.frame_Adjuntar)
+        self.boton_Adjuntar = QtWidgets.QPushButton(self.frame_RegistroP)
         self.boton_Adjuntar.setGeometry(QtCore.QRect(60, 100, 85, 27))
         font = QtGui.QFont()
         font.setBold(True)
@@ -158,7 +160,7 @@ class Ui_MainWindow(object):
         self.boton_Adjuntar.setFont(font)
         self.boton_Adjuntar.setStyleSheet("background-color: rgb(179, 179, 179);")
         self.boton_Adjuntar.setObjectName("boton_Adjuntar")
-        self.boton_Procesar = QtWidgets.QPushButton(self.frame_Adjuntar)
+        self.boton_Procesar = QtWidgets.QPushButton(self.frame_RegistroP)
         self.boton_Procesar.setGeometry(QtCore.QRect(60, 170, 85, 27))
         font = QtGui.QFont()
         font.setBold(True)
@@ -166,7 +168,7 @@ class Ui_MainWindow(object):
         self.boton_Procesar.setFont(font)
         self.boton_Procesar.setStyleSheet("background-color: rgb(179, 179, 179);")
         self.boton_Procesar.setObjectName("boton_Procesar")
-        self.boton_Descargar = QtWidgets.QPushButton(self.frame_Adjuntar)
+        self.boton_Descargar = QtWidgets.QPushButton(self.frame_RegistroP)
         self.boton_Descargar.setGeometry(QtCore.QRect(60, 240, 85, 27))
         font = QtGui.QFont()
         font.setBold(True)
@@ -174,7 +176,7 @@ class Ui_MainWindow(object):
         self.boton_Descargar.setFont(font)
         self.boton_Descargar.setStyleSheet("background-color: rgb(179, 179, 179);")
         self.boton_Descargar.setObjectName("boton_Descargar")
-        self.widget = QtWidgets.QWidget(self.frame_Adjuntar)
+        self.widget = QtWidgets.QWidget(self.frame_RegistroP)
         self.widget.setGeometry(QtCore.QRect(210, 100, 251, 181))
         self.widget.setObjectName("widget")
         self.listView.raise_()
@@ -189,7 +191,7 @@ class Ui_MainWindow(object):
         self.label_Extras.raise_()
         self.boton_AboutUs.raise_()
         self.horizontalLayoutWidget.raise_()
-        self.frame_Adjuntar.raise_()
+        self.frame_RegistroP.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 744, 27))
@@ -219,5 +221,6 @@ class Ui_MainWindow(object):
         self.boton_Adjuntar.setText(_translate("MainWindow", "Adjuntar"))
         self.boton_Procesar.setText(_translate("MainWindow", "Procesar"))
         self.boton_Descargar.setText(_translate("MainWindow", "Descargar"))
+
 
 import logo_rc

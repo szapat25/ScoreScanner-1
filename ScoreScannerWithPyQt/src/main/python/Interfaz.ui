@@ -292,7 +292,7 @@ selection-color: rgb(0, 0, 0);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QFrame" name="frame_Adjuntar">
+   <widget class="QFrame" name="frame_RegistroP">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -441,7 +441,7 @@ selection-color: rgb(0, 0, 0);</string>
    <zorder>label_Extras</zorder>
    <zorder>boton_AboutUs</zorder>
    <zorder>horizontalLayoutWidget</zorder>
-   <zorder>frame_Adjuntar</zorder>
+   <zorder>frame_RegistroP</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -456,7 +456,7 @@ selection-color: rgb(0, 0, 0);</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../icons/logo.qrc"/>
+  <include location="../icons/base/logo.qrc"/>
  </resources>
  <connections/>
 </ui>
