@@ -23,7 +23,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def AdjuntarImagen(self):
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)", options=options)
+        fileName, _ = QFileDialog.getOpenFileName(self, "Choose Contact Icon", "", "Image Files (*.jpg *.pdf)", options=options)
         if fileName:
             print(fileName)
 

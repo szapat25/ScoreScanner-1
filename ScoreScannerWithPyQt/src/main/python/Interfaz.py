@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/alejandra/Entornos/ProyectoP1/ScoreScanner/ScoreScannerWithPyQt/src/Interfaz.ui'
+# Form implementation generated from reading ui file '/home/alejandra/Entornos/ProyectoP1/ScoreScanner/ScoreScannerWithPyQt/src/main/python/Interfaz.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -121,6 +122,7 @@ class Ui_MainWindow(object):
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(210, 0, 531, 71))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label = QtWidgets.QLabel(self.horizontalLayoutWidget)
         font = QtGui.QFont()
@@ -220,4 +222,5 @@ class Ui_MainWindow(object):
         self.boton_Procesar.setText(_translate("MainWindow", "Procesar"))
         self.boton_Descargar.setText(_translate("MainWindow", "Descargar"))
 
-#import logo_rc
+
+import logo_rc
