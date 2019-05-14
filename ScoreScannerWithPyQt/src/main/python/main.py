@@ -1,7 +1,9 @@
 from fbs_runtime.application_context import ApplicationContext
 from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton, QFileDialog
-from PyQt5 import QtGui, QtCore, QtWidgets
+from PyQt5 import QtGui, QtCore, QtWidgets, uic
+import Interfaz
 from Interfaz import *
+from Interfaz import Ui_MainWindow
 
 import sys
 
@@ -9,10 +11,14 @@ import sys
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent=parent)
-        self.setWindowTitle('ScoreScanner')
         self.setupUi(self)
-        boton_Adjuntar = QPushButton('Adjuntar',self)
-        boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
+        self.setWindowTitle('ScoreScanner')
+        self.setMinimumSize(750,530)
+        self.setMaximumSize(750,530)
+        #boton_Adjuntar = QPushButton('Adjuntar',self)
+        #boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
+        self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
+
 
     def AdjuntarImagen(self):
         options = QFileDialog.Options()

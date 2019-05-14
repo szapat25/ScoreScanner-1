@@ -456,7 +456,7 @@ selection-color: rgb(0, 0, 0);</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../icons/logo.qrc"/>
+  <include location="../icons/base/logo.qrc"/>
  </resources>
  <connections/>
 </ui>
