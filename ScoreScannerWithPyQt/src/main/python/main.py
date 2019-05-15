@@ -17,16 +17,24 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setMaximumSize(750,530)
         #boton_Adjuntar = QPushButton('Adjuntar',self)
         #boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
+        self.frame_RegistroP.hide()
+        self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
+        #self.boton_cerrarRP.clicked.connect(self.CerrarFrame(self.frame_RegistroP))
         self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
+
+    def RegistroPartituras(self):
+        self.frame_RegistroP.show()
 
 
     def AdjuntarImagen(self):
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getOpenFileName(self, "Choose Contact Icon", "", "Image Files (*.jpg *.pdf)", options=options)
+        fileName, _ = QFileDialog.getOpenFileName(self, "Choose Contact Icon", "", "Image Files (*.jpg *.pdf)",'/home')
         if fileName:
             print(fileName)
-
+    
+    # def CerrarFrame(self, frameACerrar):
+    #     frameACerrar.hide()
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     w = MainWindow()
