@@ -33,7 +33,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if fileName:
             print(fileName)
             self.label_Partitura.setPixmap(QtGui.QPixmap(fileName).scaled(731, 491))
-            #self.label_Partitura(QtCore.QUrl.fromUserInput('%s?file=%s' % (fileName)))
 
         
     
