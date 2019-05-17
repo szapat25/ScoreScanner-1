@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Interfaz.ui'
+# Form implementation generated from reading ui file '/home/alejandra/ProyectoP1/ScoreScanner/ScoreScannerWithPyQt/src/main/python/Interfaz.ui'
 #
 # Created by: PyQt5 UI code generator 5.12.2
 #
@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.listView.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.listView.setObjectName("listView")
         self.boton_Usuario = QtWidgets.QPushButton(self.centralwidget)
-        self.boton_Usuario.setGeometry(QtCore.QRect(50, 200, 81, 27))
+        self.boton_Usuario.setGeometry(QtCore.QRect(20, 200, 81, 27))
         font = QtGui.QFont()
         font.setPointSize(13)
         font.setBold(False)
@@ -87,7 +87,7 @@ class Ui_MainWindow(object):
 "border-style: solid;")
         self.boton_RegistroP.setObjectName("boton_RegistroP")
         self.boton_GestorP = QtWidgets.QPushButton(self.centralwidget)
-        self.boton_GestorP.setGeometry(QtCore.QRect(20, 410, 171, 31))
+        self.boton_GestorP.setGeometry(QtCore.QRect(20, 420, 171, 31))
         font = QtGui.QFont()
         font.setPointSize(13)
         font.setBold(False)
@@ -102,7 +102,7 @@ class Ui_MainWindow(object):
 "border-style: solid;")
         self.boton_GestorP.setObjectName("boton_GestorP")
         self.label_Extras = QtWidgets.QLabel(self.centralwidget)
-        self.label_Extras.setGeometry(QtCore.QRect(40, 600, 61, 17))
+        self.label_Extras.setGeometry(QtCore.QRect(10, 600, 61, 17))
         font = QtGui.QFont()
         font.setPointSize(13)
         font.setBold(True)
@@ -111,7 +111,7 @@ class Ui_MainWindow(object):
         self.label_Extras.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_Extras.setObjectName("label_Extras")
         self.boton_AboutUs = QtWidgets.QPushButton(self.centralwidget)
-        self.boton_AboutUs.setGeometry(QtCore.QRect(50, 620, 81, 27))
+        self.boton_AboutUs.setGeometry(QtCore.QRect(20, 620, 81, 27))
         font = QtGui.QFont()
         font.setPointSize(13)
         font.setBold(False)
@@ -212,15 +212,66 @@ class Ui_MainWindow(object):
         font.setKerning(True)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
-        self.boton_Adjuntar_2 = QtWidgets.QPushButton(self.frame_GestorP)
-        self.boton_Adjuntar_2.setGeometry(QtCore.QRect(60, 150, 141, 51))
+        self.boton_Autor = QtWidgets.QPushButton(self.frame_GestorP)
+        self.boton_Autor.setGeometry(QtCore.QRect(60, 150, 141, 51))
         font = QtGui.QFont()
         font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
-        self.boton_Adjuntar_2.setFont(font)
-        self.boton_Adjuntar_2.setStyleSheet("background-color: rgb(179, 179, 179);")
-        self.boton_Adjuntar_2.setObjectName("boton_Adjuntar_2")
+        self.boton_Autor.setFont(font)
+        self.boton_Autor.setStyleSheet("background-color: rgb(179, 179, 179);\n"
+"border-style: solid;\n"
+"border-radius:15px;\n"
+"")
+        self.boton_Autor.setObjectName("boton_Autor")
+        self.boton_Titulo = QtWidgets.QPushButton(self.frame_GestorP)
+        self.boton_Titulo.setGeometry(QtCore.QRect(60, 260, 141, 51))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.boton_Titulo.setFont(font)
+        self.boton_Titulo.setStyleSheet("background-color: rgb(179, 179, 179);\n"
+"border-style: solid;\n"
+"border-radius:15px;\n"
+"")
+        self.boton_Titulo.setObjectName("boton_Titulo")
+        self.boton_Id = QtWidgets.QPushButton(self.frame_GestorP)
+        self.boton_Id.setGeometry(QtCore.QRect(60, 380, 141, 51))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.boton_Id.setFont(font)
+        self.boton_Id.setStyleSheet("background-color: rgb(179, 179, 179);\n"
+"border-style: solid;\n"
+"border-radius:15px;\n"
+"")
+        self.boton_Id.setObjectName("boton_Id")
+        self.boton_Genero = QtWidgets.QPushButton(self.frame_GestorP)
+        self.boton_Genero.setGeometry(QtCore.QRect(60, 500, 141, 51))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.boton_Genero.setFont(font)
+        self.boton_Genero.setStyleSheet("background-color: rgb(179, 179, 179);\n"
+"border-style: solid;\n"
+"border-radius:15px;\n"
+"")
+        self.boton_Genero.setObjectName("boton_Genero")
+        self.spinBox_Autor = QtWidgets.QSpinBox(self.frame_GestorP)
+        self.spinBox_Autor.setGeometry(QtCore.QRect(250, 160, 771, 31))
+        self.spinBox_Autor.setObjectName("spinBox_Autor")
+        self.spinBox_Titulo = QtWidgets.QSpinBox(self.frame_GestorP)
+        self.spinBox_Titulo.setGeometry(QtCore.QRect(250, 270, 771, 31))
+        self.spinBox_Titulo.setObjectName("spinBox_Titulo")
+        self.spinBox_Id = QtWidgets.QSpinBox(self.frame_GestorP)
+        self.spinBox_Id.setGeometry(QtCore.QRect(250, 390, 771, 31))
+        self.spinBox_Id.setObjectName("spinBox_Id")
+        self.spinBox_Genero = QtWidgets.QSpinBox(self.frame_GestorP)
+        self.spinBox_Genero.setGeometry(QtCore.QRect(250, 510, 771, 31))
+        self.spinBox_Genero.setObjectName("spinBox_Genero")
         self.listView.raise_()
         self.label_SSL.raise_()
         self.label_logo.raise_()
@@ -266,7 +317,10 @@ class Ui_MainWindow(object):
         self.boton_Descargar.setText(_translate("MainWindow", "Descargar"))
         self.label_GestorP.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Gestor de Partituras</span></p></body></html>"))
         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt;\">Búsqueda por:</span></p></body></html>"))
-        self.boton_Adjuntar_2.setText(_translate("MainWindow", "Autor"))
+        self.boton_Autor.setText(_translate("MainWindow", "Autor"))
+        self.boton_Titulo.setText(_translate("MainWindow", "Título"))
+        self.boton_Id.setText(_translate("MainWindow", "ID"))
+        self.boton_Genero.setText(_translate("MainWindow", "Género"))
 
 
 import logo_rc

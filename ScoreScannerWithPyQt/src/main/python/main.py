@@ -27,7 +27,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.progress.hide()
         self.progress.setMaximum(100)
         self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
-        #self.boton_cerrarRP.clicked.connect(self.CerrarFrame(self.frame_RegistroP))
         self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
         self.boton_Procesar.clicked.connect(self.ProcesarImagen)
 
