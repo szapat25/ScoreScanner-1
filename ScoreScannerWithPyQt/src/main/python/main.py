@@ -4,6 +4,7 @@ from PyQt5 import QtGui, QtCore, QtWidgets, uic
 import Interfaz
 from Interfaz import *
 from Interfaz import Ui_MainWindow
+#from pymongo import Connection
 
 import sys
 import time
@@ -29,9 +30,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
         self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
         self.boton_Procesar.clicked.connect(self.ProcesarImagen)
+        self.boton_GestorP.clicked.connect(self.GestorPartituras)
 
     def RegistroPartituras(self):
         self.frame_RegistroP.show()
+
+    def GestorPartituras(self):
+        self.frame_GestorP.show()
 
     def AdjuntarImagen(self):
         options = QFileDialog.Options()
