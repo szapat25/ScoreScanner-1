@@ -31,6 +31,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
         self.boton_Procesar.clicked.connect(self.ProcesarImagen)
         self.boton_GestorP.clicked.connect(self.GestorPartituras)
+         # Setup signals to slots for GUI interaction
+        #self.connect(self.ui.connectButton, QtCore.SIGNAL('clicked()'), self.connectButtonClicked)
 
     def RegistroPartituras(self):
         self.frame_RegistroP.show()
@@ -54,6 +56,21 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             time.sleep(0.2)
             self.progress.setValue(count)
         self.progress.hide()
+
+    # def connectButtonClicked(self):
+      # Connect button was clicked, this method is called    
+     # try:
+        # Attempt to connect with given host and port
+      #  self.connection = Connection(self.ui.hostTextField.text(), int(self.ui.portTextField.text()))
+       # print('Connected')
+     # except Exception:
+      #  errorMessage = 'Error connecting to ' + self.ui.hostTextField.text()
+       # print(errorMessage)
+        # Alert the user about connection error
+       # QtGui.QMessageBox.warning(self, 'Error', errorMessage, QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok) 
+
+
+    
 
         msg = QMessageBox()
         msg.setGeometry(650, 350, 300, 50)
