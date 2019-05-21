@@ -4,7 +4,9 @@ from PyQt5 import QtGui, QtCore, QtWidgets, uic
 import Interfaz
 from Interfaz import *
 from Interfaz import Ui_MainWindow
-#from pymongo import Connection
+from pymongo import MongoClient
+client = MongoClient()
+db = client['ScoreScannerDB']
 
 import sys
 import time
@@ -23,6 +25,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         #boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
         self.frame_RegistroP.hide()
         self.frame_GestorP.hide()
+        self.frame_Usuario.hide()
         self.progress = QProgressBar(self)
         self.progress.setGeometry(650, 350, 300, 50)
         self.progress.hide()
@@ -31,11 +34,17 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
         self.boton_Procesar.clicked.connect(self.ProcesarImagen)
         self.boton_GestorP.clicked.connect(self.GestorPartituras)
+        self.boton_Usuario.clicked.connect(self.RegistrarUsuario)
          # Setup signals to slots for GUI interaction
         #self.connect(self.ui.connectButton, QtCore.SIGNAL('clicked()'), self.connectButtonClicked)
 
     def RegistroPartituras(self):
         self.frame_RegistroP.show()
+        collection = db['Users']
+
+
+    def RegistrarUsuario(self):
+        self.frame_Usuario.show()
 
     def GestorPartituras(self):
         self.frame_GestorP.show()
@@ -56,6 +65,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             time.sleep(0.2)
             self.progress.setValue(count)
         self.progress.hide()
+
 
     # def connectButtonClicked(self):
       # Connect button was clicked, this method is called    
