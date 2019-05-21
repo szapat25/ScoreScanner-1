@@ -1,6 +1,8 @@
 from fbs_runtime.application_context import ApplicationContext
-from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton, QFileDialog, QProgressBar, QDialog, QMessageBox
-from PyQt5 import QtGui, QtCore, QtWidgets, uic
+from PyQt5.QtWidgets import *
+from PyQt5 import *
+#from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton, QFileDialog, QProgressBar, QDialog, QMessageBox
+#from PyQt5 import QtGui, QtCore, QtWidgets, uic
 import Interfaz
 from Interfaz import *
 from Interfaz import Ui_MainWindow
@@ -18,75 +20,32 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setWindowTitle('ScoreScanner')
         self.resize(1300, 720)
         self.setMinimumSize(1300, 720)
-        self.setMaximumSize(1300,720)
-        #boton_Adjuntar = QPushButton('Adjuntar',self)
-        #boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
-        self.frame_RegistroP.hide()
-        #self.frame_GestorP.hide()
-        #self.frame_Usuario.hide()
-        self.progress = QProgressBar(self)
-        self.progress.setGeometry(650, 350, 300, 50)
-        self.progress.hide()
-        self.progress.setMaximum(100)
+        self.setMaximumSize(1300,720)        
+        
         self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
-        self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
-        self.boton_Procesar.clicked.connect(self.ProcesarImagen)
         self.boton_GestorP.clicked.connect(self.GestorPartituras)
-         # Setup signals to slots for GUI interaction
-        #self.connect(self.ui.connectButton, QtCore.SIGNAL('clicked()'), self.connectButtonClicked)
+        self.boton_Usuario.clicked.connect(self.Usuario)
 
+        self.frame_RegistroP.hide()
+        self.frame_GestorP.hide()
+        self.frame_Usuario.hide()
+
+    
     def RegistroPartituras(self):
-        #self.frame_GestorP.hide()
-        #self.frame_Usuario.hide()
-        #self.frame_RegistroP.show()
+        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+        self.mdiArea.addSubWindow(self.frame_RegistroP.show())
 
     def GestorPartituras(self):
-        #self.frame_RegistroP.hide()
-        #self.frame_GestorP.hide()
-        #self.frame_Usuario.hide()
-        self.frame_GestorP.show()
-    
+        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+        self.mdiArea.addSubWindow(self.frame_GestorP.show())
+
     def Usuario(self):
-        self.frame_Usuario.show()
-
-    def AdjuntarImagen(self):
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getOpenFileName(self, "Choose Contact Icon", "", "Image Files (*.jpg *.pdf)",'/home')
-        if fileName:
-            print(fileName)
-            self.label_Partitura.setPixmap(QtGui.QPixmap(fileName).scaled(731, 491))   
-    
-    def ProcesarImagen(self):        
-        self.progress.show()
-        count = 0
-        while count < TIME_LIMIT:
-            count += 1
-            time.sleep(0.2)
-            self.progress.setValue(count)
-        self.progress.hide()
-
-        msg = QMessageBox()
-        msg.setGeometry(650, 350, 300, 50)
-        msg.setIcon(QMessageBox.Information)
-        msg.setText("La imagen ha sido procesada")
-        msg.setWindowTitle("Proceso Terminado")
-        msg.exec_()
-
-    # def connectButtonClicked(self):
-      # Connect button was clicked, this method is called    
-     # try:
-        # Attempt to connect with given host and port
-      #  self.connection = Connection(self.ui.hostTextField.text(), int(self.ui.portTextField.text()))
-       # print('Connected')
-     # except Exception:
-      #  errorMessage = 'Error connecting to ' + self.ui.hostTextField.text()
-       # print(errorMessage)
-        # Alert the user about connection error
-       # QtGui.QMessageBox.warning(self, 'Error', errorMessage, QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok) 
-
-        
-        
+        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.show())
+            
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     w = MainWindow()
