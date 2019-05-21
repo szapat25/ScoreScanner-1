@@ -22,7 +22,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         #boton_Adjuntar = QPushButton('Adjuntar',self)
         #boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
         self.frame_RegistroP.hide()
-        self.frame_GestorP.hide()
+        #self.frame_GestorP.hide()
+        #self.frame_Usuario.hide()
         self.progress = QProgressBar(self)
         self.progress.setGeometry(650, 350, 300, 50)
         self.progress.hide()
@@ -35,10 +36,18 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         #self.connect(self.ui.connectButton, QtCore.SIGNAL('clicked()'), self.connectButtonClicked)
 
     def RegistroPartituras(self):
-        self.frame_RegistroP.show()
+        #self.frame_GestorP.hide()
+        #self.frame_Usuario.hide()
+        #self.frame_RegistroP.show()
 
     def GestorPartituras(self):
+        #self.frame_RegistroP.hide()
+        #self.frame_GestorP.hide()
+        #self.frame_Usuario.hide()
         self.frame_GestorP.show()
+    
+    def Usuario(self):
+        self.frame_Usuario.show()
 
     def AdjuntarImagen(self):
         options = QFileDialog.Options()
@@ -57,6 +66,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.progress.setValue(count)
         self.progress.hide()
 
+        msg = QMessageBox()
+        msg.setGeometry(650, 350, 300, 50)
+        msg.setIcon(QMessageBox.Information)
+        msg.setText("La imagen ha sido procesada")
+        msg.setWindowTitle("Proceso Terminado")
+        msg.exec_()
+
     # def connectButtonClicked(self):
       # Connect button was clicked, this method is called    
      # try:
@@ -69,15 +85,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Alert the user about connection error
        # QtGui.QMessageBox.warning(self, 'Error', errorMessage, QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok) 
 
-
-    
-
-        msg = QMessageBox()
-        msg.setGeometry(650, 350, 300, 50)
-        msg.setIcon(QMessageBox.Information)
-        msg.setText("La imagen ha sido procesada")
-        msg.setWindowTitle("Proceso Terminado")
-        msg.exec_()
+        
         
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
