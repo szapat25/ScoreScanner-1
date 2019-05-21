@@ -40,11 +40,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def RegistroPartituras(self):
         self.frame_RegistroP.show()
-        collection = db['Users']
 
 
     def RegistrarUsuario(self):
         self.frame_Usuario.show()
+        collection = db['Users']
+        Users=db.Users
+        
 
     def GestorPartituras(self):
         self.frame_GestorP.show()
