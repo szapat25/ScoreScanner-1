@@ -22,36 +22,34 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setMinimumSize(1300, 720)
         self.setMaximumSize(1300,720)        
         
-        self.setMaximumSize(1300,720)
-        #boton_Adjuntar = QPushButton('Adjuntar',self)
-        #boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
-        self.frame_RegistroP.hide()
-        self.frame_GestorP.hide()
-        self.frame_Usuario.hide()
-        self.progress = QProgressBar(self)
-        self.progress.setGeometry(650, 350, 300, 50)
-        self.progress.hide()
-        self.progress.setMaximum(100)
         self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
         self.boton_GestorP.clicked.connect(self.GestorPartituras)
         self.boton_Usuario.clicked.connect(self.Usuario)
-        self.boton_Usuario.clicked.connect(self.RegistrarUsuario)
-         # Setup signals to slots for GUI interaction
-        #self.connect(self.ui.connectButton, QtCore.SIGNAL('clicked()'), self.connectButtonClicked)
+
+        self.frame_RegistroP.hide()
+        self.frame_GestorP.hide()
+        self.frame_Usuario.hide()
 
     def RegistroPartituras(self):
-        self.frame_RegistroP.show()
+        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+        self.mdiArea.addSubWindow(self.frame_RegistroP.show())
 
+    def GestorPartituras(self):
+        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+        self.mdiArea.addSubWindow(self.frame_GestorP.show())
+
+    def Usuario(self):
+        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.show())
 
     def RegistrarUsuario(self):
         self.frame_Usuario.show()
         collection = db['Users']
         Users=db.Users
         
-
-    def GestorPartituras(self):
-        self.frame_GestorP.show()
-
     def AdjuntarImagen(self):
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
