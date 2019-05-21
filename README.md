@@ -9,6 +9,8 @@ ScoreScanner trabaja con:
 * Python 3.7.3
 * Audiveris
 * Tesseract OCR
+* PyQt5
+* Qt 5.12
 
 ## Integrantes
 * Alejandra Cárdenas Montoya 
