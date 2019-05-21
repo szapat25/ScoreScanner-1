@@ -1,12 +1,12 @@
 from fbs_runtime.application_context import ApplicationContext
 from PyQt5.QtWidgets import *
 from PyQt5 import *
-#from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton, QFileDialog, QProgressBar, QDialog, QMessageBox
-#from PyQt5 import QtGui, QtCore, QtWidgets, uic
 import Interfaz
 from Interfaz import *
 from Interfaz import Ui_MainWindow
-#from pymongo import Connection
+from pymongo import MongoClient
+client = MongoClient()
+db = client['ScoreScannerDB']
 
 import sys
 import time
@@ -22,9 +22,65 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setMinimumSize(1300, 720)
         self.setMaximumSize(1300,720)        
         
+        self.setMaximumSize(1300,720)
+        #boton_Adjuntar = QPushButton('Adjuntar',self)
+        #boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
+        self.frame_RegistroP.hide()
+        self.frame_GestorP.hide()
+        self.frame_Usuario.hide()
+        self.progress = QProgressBar(self)
+        self.progress.setGeometry(650, 350, 300, 50)
+        self.progress.hide()
+        self.progress.setMaximum(100)
         self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
         self.boton_GestorP.clicked.connect(self.GestorPartituras)
         self.boton_Usuario.clicked.connect(self.Usuario)
+        self.boton_Usuario.clicked.connect(self.RegistrarUsuario)
+         # Setup signals to slots for GUI interaction
+        #self.connect(self.ui.connectButton, QtCore.SIGNAL('clicked()'), self.connectButtonClicked)
+
+    def RegistroPartituras(self):
+        self.frame_RegistroP.show()
+
+
+    def RegistrarUsuario(self):
+        self.frame_Usuario.show()
+        collection = db['Users']
+        Users=db.Users
+        
+
+    def GestorPartituras(self):
+        self.frame_GestorP.show()
+
+    def AdjuntarImagen(self):
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        fileName, _ = QFileDialog.getOpenFileName(self, "Choose Contact Icon", "", "Image Files (*.jpg *.pdf)",'/home')
+        if fileName:
+            print(fileName)
+            self.label_Partitura.setPixmap(QtGui.QPixmap(fileName).scaled(731, 491))   
+    
+    def ProcesarImagen(self):        
+        self.progress.show()
+        count = 0
+        while count < TIME_LIMIT:
+            count += 1
+            time.sleep(0.2)
+            self.progress.setValue(count)
+        self.progress.hide()
+
+
+    # def connectButtonClicked(self):
+      # Connect button was clicked, this method is called    
+     # try:
+        # Attempt to connect with given host and port
+      #  self.connection = Connection(self.ui.hostTextField.text(), int(self.ui.portTextField.text()))
+       # print('Connected')
+     # except Exception:
+      #  errorMessage = 'Error connecting to ' + self.ui.hostTextField.text()
+       # print(errorMessage)
+        # Alert the user about connection error
+       # QtGui.QMessageBox.warning(self, 'Error', errorMessage, QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok) 
 
         self.frame_RegistroP.hide()
         self.frame_GestorP.hide()

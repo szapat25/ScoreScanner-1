@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.audiveris.omr.util.BrokenLineTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2019-05-16T20:57:10" hostname="MacBook-Air-de-Maria.local" time="0.016">
+  <properties/>
+  <testcase name="indexOf" classname="org.audiveris.omr.util.BrokenLineTest" time="0.001"/>
+  <testcase name="addPoint" classname="org.audiveris.omr.util.BrokenLineTest" time="0.0"/>
+  <testcase name="getSequence" classname="org.audiveris.omr.util.BrokenLineTest" time="0.002"/>
+  <testcase name="getPoint" classname="org.audiveris.omr.util.BrokenLineTest" time="0.001"/>
+  <testcase name="addPointEmpty" classname="org.audiveris.omr.util.BrokenLineTest" time="0.0"/>
+  <testcase name="findPoint" classname="org.audiveris.omr.util.BrokenLineTest" time="0.001"/>
+  <testcase name="findSegment" classname="org.audiveris.omr.util.BrokenLineTest" time="0.001"/>
+  <testcase name="getSequenceString" classname="org.audiveris.omr.util.BrokenLineTest" time="0.0"/>
+  <testcase name="insertPoint" classname="org.audiveris.omr.util.BrokenLineTest" time="0.0"/>
+  <testcase name="insertPointAfter" classname="org.audiveris.omr.util.BrokenLineTest" time="0.001"/>
+  <testcase name="isColinear" classname="org.audiveris.omr.util.BrokenLineTest" time="0.001"/>
+  <testcase name="movePoint" classname="org.audiveris.omr.util.BrokenLineTest" time="0.001"/>
+  <testcase name="removePoint" classname="org.audiveris.omr.util.BrokenLineTest" time="0.002"/>
+  <system-out><![CDATA[addPoint
+before: [(1,5) (10,5) (10,1) (1,1)]
+after : [(1,5) (10,5) (10,1) (1,1) (2,3)]
+getSequence
+getPoint
+addPointEmpty
+before: []
+after : [(2,3)]
+findPoint java.awt.Point[x=10,y=1]
+before: [(1,5) (10,5) (10,1) (1,1)]
+findSegment
+before: [(1,5) (10,5) (10,1) (1,1)]
+getSequenceString
+insertPoint 2
+before: [(1,5) (10,5) (10,1) (1,1)]
+after : [(1,5) (10,5) (5,2) (10,1) (1,1)]
+insertPointAfter java.awt.Point[x=10,y=1]
+before: [(1,5) (10,5) (10,1) (1,1)]
+after : [(1,5) (10,5) (10,1) (5,2) (1,1)]
+isColinear
+movePoint java.awt.Point[x=10,y=5]
+before: [(1,5) (10,5) (10,1) (1,1)]
+after : [(1,5) (11,6) (10,1) (1,1)]
+removePoint java.awt.Point[x=10,y=1]
+before: [(1,5) (10,5) (10,1) (1,1)]
+after : [(1,5) (10,5) (1,1)]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
