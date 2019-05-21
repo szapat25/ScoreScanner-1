@@ -1,12 +1,17 @@
 from fbs_runtime.application_context import ApplicationContext
-from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton, QFileDialog
-from PyQt5 import QtGui, QtCore, QtWidgets, uic
+from PyQt5.QtWidgets import *
+from PyQt5 import *
+#from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton, QFileDialog, QProgressBar, QDialog, QMessageBox
+#from PyQt5 import QtGui, QtCore, QtWidgets, uic
 import Interfaz
 from Interfaz import *
 from Interfaz import Ui_MainWindow
+#from pymongo import Connection
 
 import sys
+import time
 
+TIME_LIMIT = 100
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
@@ -15,30 +20,32 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setWindowTitle('ScoreScanner')
         self.resize(1300, 720)
         self.setMinimumSize(1300, 720)
-        self.setMaximumSize(1300,720)
-        #boton_Adjuntar = QPushButton('Adjuntar',self)
-        #boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
-        self.frame_RegistroP.hide()
-        self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
-        #self.boton_cerrarRP.clicked.connect(self.CerrarFrame(self.frame_RegistroP))
-        self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
-
-    def RegistroPartituras(self):
-        self.frame_RegistroP.show()
-
-    def AdjuntarImagen(self):
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getOpenFileName(self, "Choose Contact Icon", "", "Image Files (*.jpg *.pdf)",'/home')
-        if fileName:
-            print(fileName)
-            #self.label_Partitura.setPixmap(QtGui.QPixmap(fileName).scaled(731, 491))
-            self.label_Partitura(QtCore.QUrl.fromUserInput('%s?file=%s' % (fileName)))
-
+        self.setMaximumSize(1300,720)        
         
+        self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
+        self.boton_GestorP.clicked.connect(self.GestorPartituras)
+        self.boton_Usuario.clicked.connect(self.Usuario)
+
+        self.frame_RegistroP.hide()
+        self.frame_GestorP.hide()
+        self.frame_Usuario.hide()
+
     
-    # def CerrarFrame(self, frameACerrar):
-    #     frameACerrar.hide()
+    def RegistroPartituras(self):
+        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+        self.mdiArea.addSubWindow(self.frame_RegistroP.show())
+
+    def GestorPartituras(self):
+        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+        self.mdiArea.addSubWindow(self.frame_GestorP.show())
+
+    def Usuario(self):
+        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.show())
+            
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     w = MainWindow()
