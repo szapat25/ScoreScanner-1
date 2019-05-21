@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.audiveris.omr.ui.symbol.MusicFontTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-05-16T20:57:03" hostname="MacBook-Air-de-Maria.local" time="4.697">
+  <properties/>
+  <testcase name="textPrintout" classname="org.audiveris.omr.ui.symbol.MusicFontTest" time="4.697"/>
+  <system-out><![CDATA[15:57:07.453 [Test worker] DEBUG org.audiveris.omr.ui.symbol.OmrFont - Font url=file:/Users/mariacamilamoralesrios/audiveris/res/MusicalSymbols.ttf
+15:57:07.485 [Test worker] DEBUG org.audiveris.omr.ui.symbol.OmrFont - Created custom font MusicalSymbols
+15:57:07.486 [Test worker] DEBUG org.audiveris.omr.ui.symbol.OmrFont - Using cached font MusicalSymbols
+15:57:07.486 [Test worker] DEBUG org.audiveris.omr.ui.symbol.OmrFont - Using cached font MusicalSymbols
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.audiveris.omr.jaxb.refs.TestRefs" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-05-16T20:57:11" hostname="MacBook-Air-de-Maria.local" time="0.065">
+  <properties/>
+  <testcase name="testInSequence" classname="org.audiveris.omr.jaxb.refs.TestRefs" time="0.056"/>
+  <testcase name="testDummy" classname="org.audiveris.omr.jaxb.refs.TestRefs" time="0.009"/>
+  <system-out><![CDATA[
+---
+testInSequence:
+Marshalling ...
+Marshalled   to   data/temp/test-refs/universe.xml
+=========================================================
+<?xml version="1.0" ?>
+<universe>
+  <store>
+    <fruits>
+      <orange name="orange 10" id="O10"></orange>
+      <apple name="pomme 1" id="A1"></apple>
+      <apple name="pomme 2" id="A2"></apple>
+      <apple name="pomme 30" id="A30"></apple>
+      <orange name="orange 1" id="O1"></orange>
+      <orange name="orange 2" id="O2"></orange>
+      <orange name="orange 3" id="O3"></orange>
+    </fruits>
+  </store>
+  <basket>
+    <apples>A1 A2 A30</apples>
+    <oranges>O10 O1 O2 O3</oranges>
+  </basket>
+</universe>=========================================================
+Unmarshalling ...
+Unmarshalled from data/temp/test-refs/universe.xml
+==================================
+   org.audiveris.omr.jaxb.refs.Orange@43dc87b4 orange: orange 10
+==================================
+   org.audiveris.omr.jaxb.refs.Apple@50171931 apple: pomme 1
+==================================
+   org.audiveris.omr.jaxb.refs.Apple@19afb299 apple: pomme 2
+==================================
+   org.audiveris.omr.jaxb.refs.Apple@5b6ca3c9 apple: pomme 30
+==================================
+   org.audiveris.omr.jaxb.refs.Orange@7caa7e37 orange: orange 1
+==================================
+   org.audiveris.omr.jaxb.refs.Orange@141c2e02 orange: orange 2
+==================================
+   org.audiveris.omr.jaxb.refs.Orange@70437d62 orange: orange 3
++++ End testInSequence(org.audiveris.omr.jaxb.refs.TestRefs)
+
+---
+testDummy:
++++ End testDummy(org.audiveris.omr.jaxb.refs.TestRefs)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
