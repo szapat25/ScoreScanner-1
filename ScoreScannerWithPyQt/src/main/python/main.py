@@ -77,7 +77,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         msg = QMessageBox()
         msg.setGeometry(650, 350, 300, 50)
-        msg.setIcon(QMessageBox.Information)
+        msg.setIcon(QMessageBox.ButtonRole.AcceptRole)
         msg.setText("La imagen ha sido procesada")
         msg.setWindowTitle("Proceso Terminado")
         msg.exec_()
