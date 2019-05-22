@@ -88,11 +88,7 @@ background-color: rgb(105, 105, 105);</string>
    <widget class="QPushButton" name="boton_Usuario">
     <property name="geometry">
      <rect>
-<<<<<<< HEAD
       <x>20</x>
-=======
-      <x>50</x>
->>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
       <y>200</y>
       <width>81</width>
       <height>27</height>
@@ -197,11 +193,7 @@ border-style: solid;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-<<<<<<< HEAD
       <y>420</y>
-=======
-      <y>410</y>
->>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
       <width>171</width>
       <height>31</height>
      </rect>
@@ -229,11 +221,7 @@ border-style: solid;</string>
    <widget class="QLabel" name="label_Extras">
     <property name="geometry">
      <rect>
-<<<<<<< HEAD
       <x>10</x>
-=======
-      <x>40</x>
->>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
       <y>600</y>
       <width>61</width>
       <height>17</height>
@@ -256,11 +244,7 @@ border-style: solid;</string>
    <widget class="QPushButton" name="boton_AboutUs">
     <property name="geometry">
      <rect>
-<<<<<<< HEAD
       <x>20</x>
-=======
-      <x>50</x>
->>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
       <y>620</y>
       <width>81</width>
       <height>27</height>
@@ -370,7 +354,6 @@ selection-color: rgb(0, 0, 0);</string>
      </property>
     </widget>
     <widget class="QPushButton" name="boton_Adjuntar">
-<<<<<<< HEAD
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -398,12 +381,6 @@ selection-color: rgb(0, 0, 0);</string>
       <rect>
        <x>80</x>
        <y>260</y>
-=======
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>110</y>
->>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
        <width>141</width>
        <height>51</height>
       </rect>
@@ -426,11 +403,7 @@ selection-color: rgb(0, 0, 0);</string>
      <property name="geometry">
       <rect>
        <x>80</x>
-<<<<<<< HEAD
        <y>410</y>
-=======
-       <y>260</y>
->>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
        <width>141</width>
        <height>51</height>
       </rect>
@@ -465,13 +438,6 @@ selection-color: rgb(0, 0, 0);</string>
       <cstring>label_Partitura</cstring>
      </property>
     </widget>
-    <zorder>line</zorder>
-    <zorder>label_2</zorder>
-    <zorder>boton_Adjuntar</zorder>
-    <zorder>boton_Procesar</zorder>
-    <zorder>boton_Descargar</zorder>
-    <zorder>label_Partitura</zorder>
-    <zorder>frame_GestorP</zorder>
    </widget>
    <widget class="QFrame" name="frame_GestorP">
     <property name="geometry">
@@ -545,13 +511,8 @@ selection-color: rgb(0, 0, 0);</string>
     <widget class="QPushButton" name="boton_Autor">
      <property name="geometry">
       <rect>
-<<<<<<< HEAD
        <x>60</x>
        <y>150</y>
-=======
-       <x>80</x>
-       <y>410</y>
->>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
        <width>141</width>
        <height>51</height>
       </rect>
@@ -651,7 +612,6 @@ border-radius:15px;
       <string>Género</string>
      </property>
     </widget>
-<<<<<<< HEAD
     <widget class="QSpinBox" name="spinBox_Autor">
      <property name="geometry">
       <rect>
@@ -891,41 +851,10 @@ border-radius:15px;
        <y>460</y>
        <width>921</width>
        <height>31</height>
-=======
-    <widget class="QLabel" name="label_Partitura">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>80</y>
-       <width>731</width>
-       <height>491</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="buddy">
-      <cstring>label_Partitura</cstring>
-     </property>
-    </widget>
-    <widget class="QFrame" name="frame_GestorP">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>1061</width>
-       <height>581</height>
->>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
      </property>
      <widget class="Line" name="line_2">
       <property name="geometry">
@@ -1005,7 +934,6 @@ border-radius:15px;
    <zorder>label_Extras</zorder>
    <zorder>boton_AboutUs</zorder>
    <zorder>horizontalLayoutWidget</zorder>
-   <zorder>frame_Usuario</zorder>
    <zorder>mdiArea</zorder>
    <zorder>frame_RegistroP</zorder>
    <zorder>frame_GestorP</zorder>

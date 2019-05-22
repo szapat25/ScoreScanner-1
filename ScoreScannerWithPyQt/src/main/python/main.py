@@ -77,28 +77,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         msg = QMessageBox()
         msg.setGeometry(650, 350, 300, 50)
-        msg.setIcon(QMessageBox.ButtonRole.AcceptRole)
+        msg.setIcon(QMessageBox.Information)
         msg.setText("La imagen ha sido procesada")
         msg.setWindowTitle("Proceso Terminado")
         msg.exec_()
-
-
-
-    # def connectButtonClicked(self):
-      # Connect button was clicked, this method is called    
-     # try:
-        # Attempt to connect with given host and port
-      #  self.connection = Connection(self.ui.hostTextField.text(), int(self.ui.portTextField.text()))
-       # print('Connected')
-     # except Exception:
-      #  errorMessage = 'Error connecting to ' + self.ui.hostTextField.text()
-       # print(errorMessage)
-        # Alert the user about connection error
-       # QtGui.QMessageBox.warning(self, 'Error', errorMessage, QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok) 
-
-        self.frame_RegistroP.hide()
-        self.frame_GestorP.hide()
-        self.frame_Usuario.hide()
 
     
     def RegistroPartituras(self):
