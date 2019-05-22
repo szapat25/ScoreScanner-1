@@ -22,9 +22,17 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setMinimumSize(1300, 720)
         self.setMaximumSize(1300,720)        
         
+        self.progress = QProgressBar(self)
+        self.progress.setGeometry(650, 350, 300, 50)
+        self.progress.hide()
+        self.progress.setMaximum(100)
+
         self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
         self.boton_GestorP.clicked.connect(self.GestorPartituras)
         self.boton_Usuario.clicked.connect(self.Usuario)
+
+        self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
+        self.boton_Procesar.clicked.connect(self.ProcesarImagen)
 
         self.frame_RegistroP.hide()
         self.frame_GestorP.hide()
@@ -63,9 +71,17 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         count = 0
         while count < TIME_LIMIT:
             count += 1
-            time.sleep(0.2)
+            time.sleep(0.05)
             self.progress.setValue(count)
         self.progress.hide()
+
+        msg = QMessageBox()
+        msg.setGeometry(650, 350, 300, 50)
+        msg.setIcon(QMessageBox.Information)
+        msg.setText("La imagen ha sido procesada")
+        msg.setWindowTitle("Proceso Terminado")
+        msg.exec_()
+
 
 
     # def connectButtonClicked(self):
