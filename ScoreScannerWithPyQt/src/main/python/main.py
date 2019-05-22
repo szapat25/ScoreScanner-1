@@ -72,7 +72,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         count = 0
         while count < TIME_LIMIT:
             count += 1
-            time.sleep(0.05)
+            time.sleep(0.3)
             self.progress.setValue(count)
         self.progress.hide()
 
@@ -86,24 +86,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def DescargarArchivo(self):
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getSaveFileName(self, "Save to MusicXML", "prueba.mxl", "MusicXML (*.txt);")[0]
-
-
-
-    # def RegistroPartituras(self):
-    #     self.mdiArea.addSubWindow(self.frame_GestorP.hide())
-    #     self.mdiArea.addSubWindow(self.frame_Usuario.hide())
-    #     self.mdiArea.addSubWindow(self.frame_RegistroP.show())
-
-    # def GestorPartituras(self):
-    #     self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
-    #     self.mdiArea.addSubWindow(self.frame_Usuario.hide())
-    #     self.mdiArea.addSubWindow(self.frame_GestorP.show())
-
-    # def Usuario(self):
-    #     self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
-    #     self.mdiArea.addSubWindow(self.frame_GestorP.hide())
-    #     self.mdiArea.addSubWindow(self.frame_Usuario.show())
+        fileName, _ = QFileDialog.getSaveFileName(self, "Save to MusicXML", "Partitura_Prueba.mxl", "MusicXML (*.txt);")[0]
             
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
