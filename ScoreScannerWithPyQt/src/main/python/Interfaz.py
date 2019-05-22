@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
+<<<<<<< HEAD
 # Form implementation generated from reading ui file '/home/alejandra/ProyectoP1/ScoreScanner/ScoreScannerWithPyQt/src/main/python/Interfaz.ui'
+=======
+# Form implementation generated from reading ui file 'Interfaz.ui'
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
 #
 # Created by: PyQt5 UI code generator 5.12.2
 #
@@ -39,7 +43,11 @@ class Ui_MainWindow(object):
         self.listView.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.listView.setObjectName("listView")
         self.boton_Usuario = QtWidgets.QPushButton(self.centralwidget)
+<<<<<<< HEAD
         self.boton_Usuario.setGeometry(QtCore.QRect(20, 200, 81, 27))
+=======
+        self.boton_Usuario.setGeometry(QtCore.QRect(50, 200, 81, 27))
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
         font = QtGui.QFont()
         font.setPointSize(13)
         font.setBold(False)
@@ -87,7 +95,11 @@ class Ui_MainWindow(object):
 "border-style: solid;")
         self.boton_RegistroP.setObjectName("boton_RegistroP")
         self.boton_GestorP = QtWidgets.QPushButton(self.centralwidget)
+<<<<<<< HEAD
         self.boton_GestorP.setGeometry(QtCore.QRect(20, 420, 171, 31))
+=======
+        self.boton_GestorP.setGeometry(QtCore.QRect(20, 410, 171, 31))
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
         font = QtGui.QFont()
         font.setPointSize(13)
         font.setBold(False)
@@ -102,7 +114,11 @@ class Ui_MainWindow(object):
 "border-style: solid;")
         self.boton_GestorP.setObjectName("boton_GestorP")
         self.label_Extras = QtWidgets.QLabel(self.centralwidget)
+<<<<<<< HEAD
         self.label_Extras.setGeometry(QtCore.QRect(10, 600, 61, 17))
+=======
+        self.label_Extras.setGeometry(QtCore.QRect(40, 600, 61, 17))
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
         font = QtGui.QFont()
         font.setPointSize(13)
         font.setBold(True)
@@ -111,7 +127,11 @@ class Ui_MainWindow(object):
         self.label_Extras.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_Extras.setObjectName("label_Extras")
         self.boton_AboutUs = QtWidgets.QPushButton(self.centralwidget)
+<<<<<<< HEAD
         self.boton_AboutUs.setGeometry(QtCore.QRect(20, 620, 81, 27))
+=======
+        self.boton_AboutUs.setGeometry(QtCore.QRect(50, 620, 81, 27))
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
         font = QtGui.QFont()
         font.setPointSize(13)
         font.setBold(False)
@@ -185,6 +205,7 @@ class Ui_MainWindow(object):
         self.boton_Descargar.setStyleSheet("background-color: rgb(179, 179, 179);")
         self.boton_Descargar.setObjectName("boton_Descargar")
         self.label_Partitura = QtWidgets.QLabel(self.frame_RegistroP)
+<<<<<<< HEAD
         self.label_Partitura.setGeometry(QtCore.QRect(280, 80, 731, 491))
         self.label_Partitura.setText("")
         self.label_Partitura.setObjectName("label_Partitura")
@@ -346,6 +367,11 @@ class Ui_MainWindow(object):
         self.lineEdit_CorreoUsuario_3 = QtWidgets.QLineEdit(self.frame_Usuario)
         self.lineEdit_CorreoUsuario_3.setGeometry(QtCore.QRect(50, 460, 921, 31))
         self.lineEdit_CorreoUsuario_3.setObjectName("lineEdit_CorreoUsuario_3")
+=======
+        self.label_Partitura.setGeometry(QtCore.QRect(300, 80, 631, 501))
+        self.label_Partitura.setText("")
+        self.label_Partitura.setObjectName("label_Partitura")
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
         self.listView.raise_()
         self.label_SSL.raise_()
         self.label_logo.raise_()

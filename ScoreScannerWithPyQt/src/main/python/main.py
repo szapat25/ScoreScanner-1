@@ -1,12 +1,21 @@
 from fbs_runtime.application_context import ApplicationContext
 from PyQt5.QtWidgets import *
 from PyQt5 import *
+<<<<<<< HEAD
 import Interfaz
 from Interfaz import *
 from Interfaz import Ui_MainWindow
 from pymongo import MongoClient
 client = MongoClient()
 db = client['ScoreScannerDB']
+=======
+#from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton, QFileDialog, QProgressBar, QDialog, QMessageBox
+#from PyQt5 import QtGui, QtCore, QtWidgets, uic
+import Interfaz
+from Interfaz import *
+from Interfaz import Ui_MainWindow
+#from pymongo import Connection
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
 
 import sys
 import time
@@ -22,6 +31,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setMinimumSize(1300, 720)
         self.setMaximumSize(1300,720)        
         
+<<<<<<< HEAD
         self.progress = QProgressBar(self)
         self.progress.setGeometry(650, 350, 300, 50)
         self.progress.hide()
@@ -100,17 +110,36 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.frame_GestorP.hide()
         self.frame_Usuario.hide()
 
+=======
+        self.boton_RegistroP.clicked.connect(self.RegistroPartituras)
+        self.boton_GestorP.clicked.connect(self.GestorPartituras)
+        self.boton_Usuario.clicked.connect(self.Usuario)
+
+        self.frame_RegistroP.hide()
+        self.frame_GestorP.hide()
+        self.frame_Usuario.hide()
+
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
     
     def RegistroPartituras(self):
         self.mdiArea.addSubWindow(self.frame_GestorP.hide())
         self.mdiArea.addSubWindow(self.frame_Usuario.hide())
         self.mdiArea.addSubWindow(self.frame_RegistroP.show())
+<<<<<<< HEAD
 
     def GestorPartituras(self):
         self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
         self.mdiArea.addSubWindow(self.frame_Usuario.hide())
         self.mdiArea.addSubWindow(self.frame_GestorP.show())
 
+=======
+
+    def GestorPartituras(self):
+        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+        self.mdiArea.addSubWindow(self.frame_GestorP.show())
+
+>>>>>>> db0a31d2240ac6af6596fa41b8c3aad34b7e0c7f
     def Usuario(self):
         self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
         self.mdiArea.addSubWindow(self.frame_GestorP.hide())
