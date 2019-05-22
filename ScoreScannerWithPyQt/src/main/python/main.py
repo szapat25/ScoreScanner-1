@@ -33,6 +33,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
         self.boton_Procesar.clicked.connect(self.ProcesarImagen)
+        self.boton_Descargar.clicked.connect(self.DescargarArchivo)
 
         self.frame_RegistroP.hide()
         self.frame_GestorP.hide()
@@ -71,50 +72,21 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         count = 0
         while count < TIME_LIMIT:
             count += 1
-            time.sleep(0.05)
+            time.sleep(0.3)
             self.progress.setValue(count)
         self.progress.hide()
 
         msg = QMessageBox()
         msg.setGeometry(650, 350, 300, 50)
-        msg.setIcon(QMessageBox.ButtonRole.AcceptRole)
+        msg.setIcon(QMessageBox.Information)
         msg.setText("La imagen ha sido procesada")
         msg.setWindowTitle("Proceso Terminado")
         msg.exec_()
 
-
-
-    # def connectButtonClicked(self):
-      # Connect button was clicked, this method is called    
-     # try:
-        # Attempt to connect with given host and port
-      #  self.connection = Connection(self.ui.hostTextField.text(), int(self.ui.portTextField.text()))
-       # print('Connected')
-     # except Exception:
-      #  errorMessage = 'Error connecting to ' + self.ui.hostTextField.text()
-       # print(errorMessage)
-        # Alert the user about connection error
-       # QtGui.QMessageBox.warning(self, 'Error', errorMessage, QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok) 
-
-        self.frame_RegistroP.hide()
-        self.frame_GestorP.hide()
-        self.frame_Usuario.hide()
-
-    
-    def RegistroPartituras(self):
-        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
-        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
-        self.mdiArea.addSubWindow(self.frame_RegistroP.show())
-
-    def GestorPartituras(self):
-        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
-        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
-        self.mdiArea.addSubWindow(self.frame_GestorP.show())
-
-    def Usuario(self):
-        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
-        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
-        self.mdiArea.addSubWindow(self.frame_Usuario.show())
+    def DescargarArchivo(self):
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        fileName, _ = QFileDialog.getSaveFileName(self, "Save to MusicXML", "Partitura_Prueba.mxl", "MusicXML (*.txt);")[0]
             
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
