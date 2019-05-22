@@ -33,6 +33,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.boton_Adjuntar.clicked.connect(self.AdjuntarImagen)
         self.boton_Procesar.clicked.connect(self.ProcesarImagen)
+        self.boton_Descargar.clicked.connect(self.DescargarArchivo)
 
         self.frame_RegistroP.hide()
         self.frame_GestorP.hide()
@@ -82,21 +83,27 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         msg.setWindowTitle("Proceso Terminado")
         msg.exec_()
 
-    
-    def RegistroPartituras(self):
-        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
-        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
-        self.mdiArea.addSubWindow(self.frame_RegistroP.show())
+    def DescargarArchivo(self):
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        fileName, _ = QFileDialog.getSaveFileName(self, "Save to MusicXML", "prueba.mxl", "MusicXML (*.txt);")[0]
 
-    def GestorPartituras(self):
-        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
-        self.mdiArea.addSubWindow(self.frame_Usuario.hide())
-        self.mdiArea.addSubWindow(self.frame_GestorP.show())
 
-    def Usuario(self):
-        self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
-        self.mdiArea.addSubWindow(self.frame_GestorP.hide())
-        self.mdiArea.addSubWindow(self.frame_Usuario.show())
+
+    # def RegistroPartituras(self):
+    #     self.mdiArea.addSubWindow(self.frame_GestorP.hide())
+    #     self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+    #     self.mdiArea.addSubWindow(self.frame_RegistroP.show())
+
+    # def GestorPartituras(self):
+    #     self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+    #     self.mdiArea.addSubWindow(self.frame_Usuario.hide())
+    #     self.mdiArea.addSubWindow(self.frame_GestorP.show())
+
+    # def Usuario(self):
+    #     self.mdiArea.addSubWindow(self.frame_RegistroP.hide())
+    #     self.mdiArea.addSubWindow(self.frame_GestorP.hide())
+    #     self.mdiArea.addSubWindow(self.frame_Usuario.show())
             
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
